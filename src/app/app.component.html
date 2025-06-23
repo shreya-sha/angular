@@ -1,0 +1,40 @@
+<div style="margin-top: 100px;"></div>
+<p style="text-align: center;color:blueviolet;font-size: large;   background-color: azure;width:300px;margin:auto">To do list</p>
+<form>
+<div class="inputbox">
+  <span>To do name :</span>
+  <input type="text">
+</div>
+
+<div class="inputbox">
+  <span>Date: </span>
+  <input type="date">
+</div>
+
+<div>
+  <button  id="btnid">Add</button>
+</div>
+</form>
+
+<hr>
+<br>
+{{tasklst|json}}
+<ol *ngFor="let i of tasklst;">
+  <li>{{i.taskname}}</li>
+  <li>{{i.taskdate}}</li>
+  <li>{{i.taskdate|age}}</li>
+</ol>
+
+<p>
+  {{messagechild|uppercase}}
+</p>
+<div>
+  <app-headerchild (notify)="parentmethod($event)"></app-headerchild>
+</div>
+
+<div>
+<app-headerchild (notifyobj)="parentmethod1($event)"></app-headerchild>
+</div>
+<p>
+  {{mess.name}}
+</p>
